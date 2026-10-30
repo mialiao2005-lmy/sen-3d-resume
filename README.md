@@ -45,9 +45,11 @@
 前端应用整个在 [`web/`](web) 下，**下文提到的代码 / 资源路径都相对 `web/`**（如 `src/App.tsx` 即 `web/src/App.tsx`），npm 命令也在 `web/` 里执行。
 
 ```bash
-git clone https://github.com/dayinji/sen-3d-resume.git
-cd sen-3d-resume/web
-npm install
+git clone https://github.com/mialiao2005-lmy/sen-3d-resume.git
+cd sen-3d-resume
+git switch setup/model-readiness
+cd web
+npm ci
 npm run dev        # 开发 http://localhost:5173
 ```
 
@@ -58,7 +60,10 @@ npm run build      # 类型检查 + 打包，产物输出到 dist/
 npm run preview    # 预览 build 产物
 npm run typecheck  # 仅类型检查（tsc -b）
 npm run lint       # ESLint
+npm run check:model # 检查 GLB 模型接入结构
 ```
+
+从 Fork 到本地运行、再到模型接入检查的步骤见[中文上手指南](docs/FIRST-STEPS.zh.md)。
 
 **环境要求：** Node.js 20+（ESLint 10 需要）。无后端、无数据库、无需任何 API key。
 
@@ -215,6 +220,10 @@ npm run build    # → dist/
 ## 技术栈
 
 React 18 · TypeScript · @react-three/fiber · @react-three/drei · @react-three/postprocessing · three · framer-motion · zustand · Vite
+
+## 项目状态与恢复
+
+本 Fork 目前作为阶段性成果保留，暂不继续开发或部署。分支用途、已完成工作、未完成事项和恢复步骤见[项目状态与恢复说明](docs/PROJECT-STATUS.zh.md)。
 
 ## 许可与版权
 
