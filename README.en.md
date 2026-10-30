@@ -45,9 +45,11 @@ Even on the source route, intro3d doubles as a **visual glb exporter**: skip Ble
 The whole front-end app lives under [`web/`](web). **Every code / asset path below is relative to `web/`** (e.g. `src/App.tsx` means `web/src/App.tsx`), and npm commands run inside `web/`.
 
 ```bash
-git clone https://github.com/dayinji/sen-3d-resume.git
-cd sen-3d-resume/web
-npm install
+git clone https://github.com/mialiao2005-lmy/sen-3d-resume.git
+cd sen-3d-resume
+git switch setup/model-readiness
+cd web
+npm ci
 npm run dev        # dev at http://localhost:5173
 ```
 
@@ -58,7 +60,10 @@ npm run build      # type-check + bundle, output to dist/
 npm run preview    # preview the build output
 npm run typecheck  # type-check only (tsc -b)
 npm run lint       # ESLint
+npm run check:model # check GLB model integration requirements
 ```
+
+For the step-by-step setup and model-readiness checks, see the [Chinese first-steps guide](docs/FIRST-STEPS.zh.md).
 
 **Requirements:** Node.js 20+ (ESLint 10 needs it). No backend, no database, no API keys.
 
@@ -215,6 +220,10 @@ This project and [intro3d.com](https://intro3d.com) are two ends of the same ide
 ## Tech Stack
 
 React 18 · TypeScript · @react-three/fiber · @react-three/drei · @react-three/postprocessing · three · framer-motion · zustand · Vite
+
+## Project Status & Recovery
+
+This fork is being kept as a paused project record; no active development or deployment is planned for now. See the [project status and recovery notes (Chinese)](docs/PROJECT-STATUS.zh.md) for branch roles, completed work, open items, and restart steps.
 
 ## License & Copyright
 
